@@ -27,6 +27,7 @@ const message = require('./routes/message');
 const attendance = require('./routes/timesheet');
 const leave = require('./routes/leave');
 const technology = require('./routes/technology');
+const interview = require('./routes/interview');
 /* routes */
 
 app.use(express.json({ limit: "50mb" }));
@@ -58,7 +59,8 @@ app.use('/timesheet', attendance);
 app.use('/leave', leave);
 app.use('/leaveManagement',leaveManagement);
 app.use('/api/v1/message',message);
-app.use('/technology', technology)
+app.use('/technology', technology);
+app.use('/interview', interview);
 /* routes with static path */
 
 /* Express Custom Function */

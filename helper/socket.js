@@ -14,5 +14,9 @@ module.exports.init = (server) => {
         socket.on('leave', function (data) {
             socket.leave(data);
         });
+
+        socket.on('acceptInterview', function (data) {
+            socket.broadcast.emit("accepted", data);
+        });
     });
 }
